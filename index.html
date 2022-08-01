@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>TATETI</title>
+</head>
+
+<body>
+    <div id="contenedorFormulario">
+        <div class="centrado">   
+            <label for="nombreJugador1">Jugador 1:</label>
+            <input type="text" class="cuadritos" id="nombreJugador1"/>
+        </div>
+        <div class="centrado">
+            <label for="nombreJugador2">Jugador 2:</label>
+            <input type="text" class="cuadritos" id="nombreJugador2"/> 
+        </div>
+        <div class="centrado">
+            <input type="button" value="Guardar nombres" id="guardar" class="cuadritos"/>
+        </div>
+        <div class="centrado">
+            <input type="button" value="Borrar nombres" id="borrar" class="cuadritos"/>
+        </div>
+        <div class="centrado">
+            <button class="cuadritos" id="jugar"><h2>EMPEZAR A JUGAR</h2></button>
+        </div>
+
+    </div>
+    
+    <div id="contenedorJuego">
+        <div>
+            <input type ="button" id="boton1" name="boton1" value=" " class="boton">
+            <input type ="button" id="boton2" name="boton2" value=" " class="boton">
+            <input type ="button" id="boton3" name="boton3" value=" " class="boton">
+         </div>
+        <div>
+            <input type ="button" id="boton4" name="boton4" value=" " class="boton">
+            <input type ="button" id="boton5" name="boton5" value=" " class="boton">
+            <input type ="button" id="boton6" name="boton6" value=" " class="boton">
+        </div>
+        <div>
+            <input type ="button" id="boton7" name="boton7" value=" " class="boton">
+            <input type ="button" id="boton8" name="boton8" value=" " class="boton">
+            <input type ="button" id="boton9" name="boton9" value=" " class="boton">
+        </div>
+        <div>
+            <input type="button" id="volver" value="Volver a Jugar">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./scriptt.js"></script>
+
+</body>
+
+</html>

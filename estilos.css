@@ -1,0 +1,72 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/imgg/logo_tateti-animaciones-infantiles.jpg);
+}
+.centrado{
+    text-align: center;
+
+}
+
+#contenedorFormulario {
+    padding: 20px;
+    margin: auto;/*Para que centre*/
+    width: 500px;
+    height: 500px;
+    border: 10px dashed;
+    background: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;   
+    margin-top: 50px;
+    color: white; 
+}
+
+.cuadritos{
+    height: 50px;
+    width: 400px;
+    margin: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px; 
+    color: black;
+    text-align: center;
+}
+
+
+#contenedorJuego {
+    display: none;
+    padding: 20px;
+    margin: auto;/*Para que centre*/
+    width: 500px;
+    height: 500px;
+    border: 10px dashed;
+    background: black;
+    margin-top: 50px;
+    border: 10px dashed white;
+  
+}
+
+.boton {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    margin-top: 35px;
+    margin-left: 45px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+#volver{
+    width: 430px;
+    height: 40px;
+    margin: 10px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
