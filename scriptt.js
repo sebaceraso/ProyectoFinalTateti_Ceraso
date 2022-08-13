@@ -21,6 +21,7 @@ let b9 = document.getElementById('boton9');
 let jugador = data[0].cruz;
 let guardar = document.getElementById("guardar");
 let borrar = document.getElementById("borrar");
+let jugadores = []
 
 
 
@@ -93,39 +94,34 @@ function verificarGanador() {
             let boton8 = b8.value 
             let boton9 = b9.value 
 
-        if (boton1 == '❌' && boton2 == '❌' && boton3 == '❌')
-            swal("Gano la X", "Mas suerte para la proxima O", "success");
-        if (boton4 == '❌' && boton5 == '❌' && boton6 == '❌')
-            swal("Gano la X", "Mas suerte para la proxima O", "success");
-        if (boton7 == '❌' && boton8 == '❌' && boton9 == '❌')
-            swal("Gano la X", "Mas suerte para la proxima O", "success");
-        if (boton1 == '❌' && boton4 == '❌' && boton7 == '❌')
-            swal("Gano la X", "Mas suerte para la proxima O", "success");
-        if (boton2 == '❌' && boton5 == '❌' && boton8 == '❌')
-            swal("Gano la X", "Mas suerte para la proxima O", "success");
-        if (boton3 == '❌' && boton6 == '❌' && boton9 == '❌')
-            swal("Gano la X", "Mas suerte para la proxima O", "success");
-        if (boton1 == '❌' && boton5 == '❌' && boton9 == '❌')
-            swal("Gano la X", "Mas suerte para la proxima O", "success");
-        if (boton3 == '❌' && boton5 == '❌' && boton7 == '❌')
-            swal("Gano la X", "Mas suerte para la proxima O", "success");
+        if ( (boton1 == '❌' && boton2 == '❌' && boton3 == '❌') ||
+        (boton4 == '❌' && boton5 == '❌' && boton6 == '❌') ||
+        (boton7 == '❌' && boton8 == '❌' && boton9 == '❌') ||
+        (boton1 == '❌' && boton4 == '❌' && boton7 == '❌') ||
+        (boton2 == '❌' && boton5 == '❌' && boton8 == '❌') ||
+        (boton3 == '❌' && boton6 == '❌' && boton9 == '❌') ||
+        (boton1 == '❌' && boton5 == '❌' && boton9 == '❌') ||
+        (boton3 == '❌' && boton5 == '❌' && boton7 == '❌') ){
+            swal(`Gano ${inputJugador1.value}`, `Mas suerte para la proxima ${inputJugador2.value}`, "success");
+            jugadores.push(inputJugador1.value)
+            localStorage.setItem("Gano", JSON.stringify(jugadores))
+        }
 
-        if (boton1 == '🔵' && boton2 == '🔵' && boton3 == '🔵' )
-            swal("Gano la O", "Mas suerte para la proxima X", "success");
-        if (boton4 == '🔵' && boton5 == '🔵' && boton6 == '🔵')
-            swal("Gano la O", "Mas suerte para la proxima X", "success");
-        if (boton7 == '🔵' && boton8 == '🔵' && boton9 == '🔵')
-            swal("Gano la O", "Mas suerte para la proxima X", "success");
-        if (boton1 == '🔵' && boton4 == '🔵' && boton7 == '🔵')
-            swal("Gano la O", "Mas suerte para la proxima X", "success");
-        if (boton2 == '🔵' && boton5 == '🔵' && boton8 == '🔵')
-            swal("Gano la O", "Mas suerte para la proxima X", "success");
-        if (boton3 == '🔵' && boton6 == '🔵' && boton9 == '🔵')
-            swal("Gano la O", "Mas suerte para la proxima X", "success");
-        if (boton1 == '🔵' && boton5 == '🔵' && boton9 == '🔵')
-            swal("Gano la O", "Mas suerte para la proxima X", "success");
-        if (boton3 == '🔵' && boton5 == '🔵' && boton7 == '🔵')
-            swal("Gano la O", "Mas suerte para la proxima X", "success");
+
+        else if ( (boton1 == '🔵' && boton2 == '🔵' && boton3 == '🔵' ) ||           
+        (boton4 == '🔵' && boton5 == '🔵' && boton6 == '🔵') ||
+        (boton7 == '🔵' && boton8 == '🔵' && boton9 == '🔵') ||
+        (boton1 == '🔵' && boton4 == '🔵' && boton7 == '🔵') ||
+        (boton2 == '🔵' && boton5 == '🔵' && boton8 == '🔵') ||
+        (boton3 == '🔵' && boton6 == '🔵' && boton9 == '🔵') ||
+        (boton1 == '🔵' && boton5 == '🔵' && boton9 == '🔵') ||
+        (boton3 == '🔵' && boton5 == '🔵' && boton7 == '🔵') ){
+        swal(`Gano ${inputJugador2.value}`, `Mas suerte para la proxima ${inputJugador1.value}`, "success");
+        jugadores.push(inputJugador2.value)
+        localStorage.setItem("Gano", JSON.stringify(jugadores))
+    }
+
+    
 }
 
 //Eventos
@@ -136,7 +132,7 @@ botonJugar.addEventListener("click",() => {
 
     }
     else {
-        swal("TE FALTO COMPLETAR ALGUN NOMBRE", "Completalo manco...Ingrese nuevamente", "error");
+        swal("TE FALTO COMPLETAR ALGUN NOMBRE", "Completalo por favor...Ingrese nuevamente", "error");
     }
 })
 
