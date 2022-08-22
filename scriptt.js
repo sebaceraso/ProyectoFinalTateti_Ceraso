@@ -22,6 +22,11 @@ let jugador = data[0].cruz;
 let guardar = document.getElementById("guardar");
 let borrar = document.getElementById("borrar");
 let jugadores = []
+const nombreJug1 = localStorage.getItem("Jugador 1");
+const nombreJug2 = localStorage.getItem("Jugador 2");
+
+inputJugador1.value = nombreJug1;
+inputJugador2.value = nombreJug2;
 
 
 
@@ -49,6 +54,8 @@ let borrarNombres = () => {
     inputJugador1.value = ""
     inputJugador2.value = ""
 } 
+
+
 
 function borrarTablero(){
     // let input = document.querySelectorAll(input)
@@ -102,8 +109,8 @@ function verificarGanador() {
         (boton3 == '❌' && boton6 == '❌' && boton9 == '❌') ||
         (boton1 == '❌' && boton5 == '❌' && boton9 == '❌') ||
         (boton3 == '❌' && boton5 == '❌' && boton7 == '❌') ){
-            swal(`Gano ${inputJugador1.value}`, `Mas suerte para la proxima ${inputJugador2.value}`, "success");
-            jugadores.push(inputJugador1.value)
+            swal(`Gano ${nombreJug1}`, `Mas suerte para la proxima ${nombreJug2}`, "success");
+            jugadores.push(nombreJug1)
             localStorage.setItem("Gano", JSON.stringify(jugadores))
         }
 
@@ -116,9 +123,10 @@ function verificarGanador() {
         (boton3 == '🔵' && boton6 == '🔵' && boton9 == '🔵') ||
         (boton1 == '🔵' && boton5 == '🔵' && boton9 == '🔵') ||
         (boton3 == '🔵' && boton5 == '🔵' && boton7 == '🔵') ){
-        swal(`Gano ${inputJugador2.value}`, `Mas suerte para la proxima ${inputJugador1.value}`, "success");
-        jugadores.push(inputJugador2.value)
+        swal(`Gano ${nombreJug2}`, `Mas suerte para la proxima ${nombreJug1}`, "success");
+        jugadores.push(nombreJug2)
         localStorage.setItem("Gano", JSON.stringify(jugadores))
+        
     }
 
     
